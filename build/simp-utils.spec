@@ -1,6 +1,6 @@
 Summary: SIMP Utils
 Name: simp-utils
-Version: 6.1.2
+Version: 6.2.0
 Release: 0
 License: Apache License, Version 2.0
 Group: Applications/System
@@ -48,6 +48,7 @@ chmod -R u=rwx,g=rx,o=rx %{buildroot}/usr/local/*bin
 /usr/local/sbin/puppetlast
 /usr/local/sbin/gen-ldap-update
 /usr/local/sbin/updaterepos
+/usr/local/sbin/create_new_environment.sh
 /usr/share/simp
 %attr(0750,root,root) /usr/share/simp/upgrade_scripts
 
@@ -58,6 +59,9 @@ chmod -R u=rwx,g=rx,o=rx %{buildroot}/usr/local/*bin
 # Post uninstall stuff
 
 %changelog
+* Wed Apr 24 2019 Liz Nemsick <lnemsick.simp@gmail.com> - 6.2.0-0
+- Add create_new_environment.sh
+
 * Thu Sep 20 2018 Liz Nemsick <lnemsick.simp@gmail.com> - 6.1.2-0
 - Fixed bug in which updaterepos would fail when executed with Ruby 1.8.x
   (e.g on CentOS 6 servers)
